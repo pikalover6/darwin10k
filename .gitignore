@@ -1,0 +1,20 @@
+# Build outputs — do not commit
+output/
+logs/
+
+# Downloaded source tarballs — do not commit (too large, fetched by make fetch)
+sources/
+
+# macOS artifacts
+.DS_Store
+*.dSYM/
+
+# Editor artifacts
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Temporary files
+/tmp/
