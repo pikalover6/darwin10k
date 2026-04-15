@@ -1,0 +1,90 @@
+# PureDarwin Xmas — Source Package Manifest
+# ============================================================
+# Format (tab-separated):
+#   <name>  <version>  <sha256>  <url>
+#
+# All packages sourced from Apple's public open-source releases for Darwin 9
+# (Mac OS X 10.5 Leopard), available at:
+#   https://opensource.apple.com/tarballs/
+#
+# SHA-256 checksums:
+#   "PLACEHOLDER" means the checksum has not yet been recorded in this file.
+#   fetch-sources.sh will warn and skip verification for PLACEHOLDER entries.
+#
+#   IMPORTANT: Before trusting any downloaded tarball, always verify it manually:
+#     shasum -a 256 sources/<package>-<version>.tar.gz
+#   Replace PLACEHOLDER with the actual hash and commit the change so that
+#   all future downloads are cryptographically verified.
+#
+# ── Build Bootstrap ───────────────────────────────────────────────────────────
+bootstrap_cmds	75	PLACEHOLDER	https://opensource.apple.com/tarballs/bootstrap_cmds/bootstrap_cmds-75.tar.gz
+cctools	667.8.0	PLACEHOLDER	https://opensource.apple.com/tarballs/cctools/cctools-667.8.0.tar.gz
+#
+# ── Compiler (GCC 4.2) ────────────────────────────────────────────────────────
+gcc	5664.3	PLACEHOLDER	https://opensource.apple.com/tarballs/gcc/gcc-5664.3.tar.gz
+#
+# ── Kernel ────────────────────────────────────────────────────────────────────
+xnu	1228.15.4	PLACEHOLDER	https://opensource.apple.com/tarballs/xnu/xnu-1228.15.4.tar.gz
+#
+# ── Dynamic Linker ────────────────────────────────────────────────────────────
+dyld	96.2	PLACEHOLDER	https://opensource.apple.com/tarballs/dyld/dyld-96.2.tar.gz
+#
+# ── Core Libraries ────────────────────────────────────────────────────────────
+Libsystem	111.1.4	PLACEHOLDER	https://opensource.apple.com/tarballs/Libsystem/Libsystem-111.1.4.tar.gz
+libpthread	65.1.1	PLACEHOLDER	https://opensource.apple.com/tarballs/libpthread/libpthread-65.1.1.tar.gz
+libc	498.1.7	PLACEHOLDER	https://opensource.apple.com/tarballs/Libc/Libc-498.1.7.tar.gz
+libclosure	38	PLACEHOLDER	https://opensource.apple.com/tarballs/libclosure/libclosure-38.tar.gz
+libresolv	41	PLACEHOLDER	https://opensource.apple.com/tarballs/libresolv/libresolv-41.tar.gz
+Libnotify	5	PLACEHOLDER	https://opensource.apple.com/tarballs/Libnotify/Libnotify-5.tar.gz
+Libinfo	406.1	PLACEHOLDER	https://opensource.apple.com/tarballs/Libinfo/Libinfo-406.1.tar.gz
+CommonCrypto	32212	PLACEHOLDER	https://opensource.apple.com/tarballs/CommonCrypto/CommonCrypto-32212.tar.gz
+#
+# ── CoreFoundation ────────────────────────────────────────────────────────────
+CF	476.17	PLACEHOLDER	https://opensource.apple.com/tarballs/CF/CF-476.17.tar.gz
+#
+# ── Unicode / Locale ──────────────────────────────────────────────────────────
+ICU	334.4	PLACEHOLDER	https://opensource.apple.com/tarballs/ICU/ICU-334.4.tar.gz
+#
+# ── Init / Launch ─────────────────────────────────────────────────────────────
+launchd	258.1	PLACEHOLDER	https://opensource.apple.com/tarballs/launchd/launchd-258.1.tar.gz
+#
+# ── IOKit ─────────────────────────────────────────────────────────────────────
+IOKitUser	388.2.1	PLACEHOLDER	https://opensource.apple.com/tarballs/IOKitUser/IOKitUser-388.2.1.tar.gz
+#
+# ── Configuration / Network ───────────────────────────────────────────────────
+configd	395.6	PLACEHOLDER	https://opensource.apple.com/tarballs/configd/configd-395.6.tar.gz
+#
+# ── Shell and Commands ────────────────────────────────────────────────────────
+bash	88	PLACEHOLDER	https://opensource.apple.com/tarballs/bash/bash-88.tar.gz
+shell_cmds	162	PLACEHOLDER	https://opensource.apple.com/tarballs/shell_cmds/shell_cmds-162.tar.gz
+file_cmds	207	PLACEHOLDER	https://opensource.apple.com/tarballs/file_cmds/file_cmds-207.tar.gz
+text_cmds	71.1.1	PLACEHOLDER	https://opensource.apple.com/tarballs/text_cmds/text_cmds-71.1.1.tar.gz
+adv_cmds	158.1	PLACEHOLDER	https://opensource.apple.com/tarballs/adv_cmds/adv_cmds-158.1.tar.gz
+basic_cmds	58.1.1	PLACEHOLDER	https://opensource.apple.com/tarballs/basic_cmds/basic_cmds-58.1.1.tar.gz
+network_cmds	329.2.2	PLACEHOLDER	https://opensource.apple.com/tarballs/network_cmds/network_cmds-329.2.2.tar.gz
+diskdev_cmds	557.1	PLACEHOLDER	https://opensource.apple.com/tarballs/diskdev_cmds/diskdev_cmds-557.1.tar.gz
+system_cmds	548.1.1	PLACEHOLDER	https://opensource.apple.com/tarballs/system_cmds/system_cmds-548.1.1.tar.gz
+#
+# ── Compression ───────────────────────────────────────────────────────────────
+zlib	36	PLACEHOLDER	https://opensource.apple.com/tarballs/zlib/zlib-36.tar.gz
+bzip2	29	PLACEHOLDER	https://opensource.apple.com/tarballs/bzip2/bzip2-29.tar.gz
+#
+# ── Security / Crypto ─────────────────────────────────────────────────────────
+OpenSSL	0.9.8j	PLACEHOLDER	https://opensource.apple.com/tarballs/OpenSSL/OpenSSL-0.9.8j.tar.gz
+Security	36163	PLACEHOLDER	https://opensource.apple.com/tarballs/Security/Security-36163.tar.gz
+#
+# ── Scripting Languages ───────────────────────────────────────────────────────
+perl	87	PLACEHOLDER	https://opensource.apple.com/tarballs/perl/perl-87.tar.gz
+python	24	PLACEHOLDER	https://opensource.apple.com/tarballs/python/python-24.tar.gz
+ruby	89	PLACEHOLDER	https://opensource.apple.com/tarballs/ruby/ruby-89.tar.gz
+#
+# ── Filesystems ───────────────────────────────────────────────────────────────
+hfs	226.1.1	PLACEHOLDER	https://opensource.apple.com/tarballs/hfs/hfs-226.1.1.tar.gz
+#
+# ── Boot ──────────────────────────────────────────────────────────────────────
+BootX	75.2	PLACEHOLDER	https://opensource.apple.com/tarballs/BootX/BootX-75.2.tar.gz
+#
+# ── Core OS ───────────────────────────────────────────────────────────────────
+xar	253	PLACEHOLDER	https://opensource.apple.com/tarballs/xar/xar-253.tar.gz
+copyfile	103.10.8	PLACEHOLDER	https://opensource.apple.com/tarballs/copyfile/copyfile-103.10.8.tar.gz
+corecrypto	106.1	PLACEHOLDER	https://opensource.apple.com/tarballs/corecrypto/corecrypto-106.1.tar.gz

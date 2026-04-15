@@ -1,0 +1,92 @@
+# PureDarwin Xmas — Package Build Order
+# ============================================================
+# Packages are built in the order listed here.
+# Lines beginning with # are comments.
+#
+# The order respects the dependency graph:
+#   bootstrap tools → compiler → kernel headers → libraries → kernel → userland
+#
+# ── Stage 1: Bootstrap Build Tools ───────────────────────────────────────────
+# These tools are needed to compile everything else.
+# bootstrap_cmds provides mig (Mach Interface Generator), used by the kernel.
+bootstrap_cmds
+#
+# ── Stage 2: Assembler / Linker (cctools) ────────────────────────────────────
+# Provides as(1), ld(1), ar(1), ranlib, nm, otool, etc.
+cctools
+#
+# ── Stage 3: Compiler (GCC 4.2) ──────────────────────────────────────────────
+# Apple's GCC 4.2 compiler, required to build the Darwin 9 kernel and libraries.
+gcc
+#
+# ── Stage 4: Dynamic Linker ───────────────────────────────────────────────────
+# dyld must be built before any shared libraries because it provides the ABI
+# contract between executables and the dynamic library loading mechanism.
+dyld
+#
+# ── Stage 5: Core Libraries (foundation) ─────────────────────────────────────
+# These are mutually dependent at the header/ABI level; build order below
+# is derived from Apple's B&I build system.
+CommonCrypto
+libpthread
+libresolv
+copyfile
+Libnotify
+Libinfo
+Libsystem
+libc
+libclosure
+#
+# ── Stage 6: Kernel ───────────────────────────────────────────────────────────
+# XNU must be built after the compiler toolchain and header-only passes of
+# core libraries.
+xnu
+#
+# ── Stage 7: Unicode / Locale ─────────────────────────────────────────────────
+ICU
+#
+# ── Stage 8: CoreFoundation ───────────────────────────────────────────────────
+CF
+#
+# ── Stage 9: IOKit ────────────────────────────────────────────────────────────
+IOKitUser
+#
+# ── Stage 10: Init System ─────────────────────────────────────────────────────
+launchd
+#
+# ── Stage 11: Security ────────────────────────────────────────────────────────
+corecrypto
+OpenSSL
+Security
+#
+# ── Stage 12: Compression ─────────────────────────────────────────────────────
+zlib
+bzip2
+#
+# ── Stage 13: Configuration ───────────────────────────────────────────────────
+configd
+#
+# ── Stage 14: Filesystems ─────────────────────────────────────────────────────
+hfs
+#
+# ── Stage 15: Boot ────────────────────────────────────────────────────────────
+BootX
+#
+# ── Stage 16: Archive / Packaging Tools ──────────────────────────────────────
+xar
+#
+# ── Stage 17: Shell and Core Commands ────────────────────────────────────────
+bash
+shell_cmds
+basic_cmds
+file_cmds
+text_cmds
+adv_cmds
+diskdev_cmds
+system_cmds
+network_cmds
+#
+# ── Stage 18: Scripting Runtimes ─────────────────────────────────────────────
+perl
+python
+ruby
